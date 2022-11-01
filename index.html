@@ -1,0 +1,375 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Papan skore tanding Karate</title>
+    <link rel="stylesheet" href="css/kumite.css" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="screen" charset="utf-8" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/kumite.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
+</head>
+
+<body style="background-color:black;overflow:hidden;">
+    <audio class="audiowarning" id="audiowarning_short" src="sounds/whistle_short.mp3" preload="auto"></audio>
+    <audio class="audiowarning" id="audiowarning_alert" src="sounds/alert.mp3" preload="auto"></audio>
+
+    <div id="han-tei">
+        <div id="han-tei_title">Hantei:</div>
+        <div id="central_hantei">
+            <div id="JLU">J2</div>
+            <div id="central_ring">
+                <div id="left_ring">
+                    <div id="title_left">Ao</div>
+                    <div class="cuadrado_tres">
+                        <div id="bl31"><span class="glyphicon glyphicon glyphicon-flag"></span></div>
+                        <div id="bl32"><span class="glyphicon glyphicon glyphicon-flag"></span></div>
+                        <div id="bl33"><span class="glyphicon glyphicon glyphicon-flag"></span></div>
+                        <div id="b3J1">J1</div>
+                        <div id="b3J2">J2</div>
+                        <div id="b3J3">J3</div>
+                    </div>
+                    <div class="cuadrado_cinco">
+                        <div id="bl51"><span class="glyphicon glyphicon glyphicon-flag"></span></div>
+                        <div id="bl52"><span class="glyphicon glyphicon glyphicon-flag"></span></div>
+                        <div id="bl53"><span class="glyphicon glyphicon glyphicon-flag"></span></div>
+                        <div id="bl54"><span class="glyphicon glyphicon glyphicon-flag"></span></div>
+                        <div id="bl55"><span class="glyphicon glyphicon glyphicon-flag"></span></div>
+                        <div id="b5J1">J1</div>
+                        <div id="b5J2">J2</div>
+                        <div id="b5J3">J3</div>
+                        <div id="b5J4">J4</div>
+                        <div id="b5J5">J5</div>
+                    </div>
+                    <div id="c_l_b">0</div>
+                </div>
+                <div id="right_ring">
+                    <div id="title_right">Aka</div>
+                    <div class="cuadrado_tres">
+                        <div id="br31"><span class="glyphicon glyphicon glyphicon-flag"></div>
+                        <div id="br32"><span class="glyphicon glyphicon glyphicon-flag"></div>
+                        <div id="br33"><span class="glyphicon glyphicon glyphicon-flag"></div>
+                        <div id="b3J1">J1</div>
+                        <div id="b3J2">J2</div>
+                        <div id="b3J3">J3</div>
+                    </div>
+                    <div class="cuadrado_cinco">
+                        <div id="br51"><span class="glyphicon glyphicon glyphicon-flag"></div>
+                        <div id="br52"><span class="glyphicon glyphicon glyphicon-flag"></div>
+                        <div id="br53"><span class="glyphicon glyphicon glyphicon-flag"></div>
+                        <div id="br54"><span class="glyphicon glyphicon glyphicon-flag"></div>
+                        <div id="br55"><span class="glyphicon glyphicon glyphicon-flag"></div>
+                        <div id="b5J1">J1</div>
+                        <div id="b5J2">J2</div>
+                        <div id="b5J3">J3</div>
+                        <div id="b5J4">J4</div>
+                        <div id="b5J5">J5</div>
+                    </div>
+                    <div id="c_r_b">0</div>
+                </div>
+            </div>
+            <div id="JRU">J3</div>
+            <div id="JLD">J1</div>
+            <div id="JC">R</div>
+            <div id="JRD">J4</div>
+        </div>
+    </div>
+    <div id="circle_senshu">&#10004;</div>
+    <div id="ganar">
+        <div id="text_message" style="font-weight:bold"></div>
+        <div id="Yes">Yes</div>
+        <div id="No">No</div>
+    </div>
+    <div id="ask_final">
+        <div id="text_message">
+            <span style="color:white">Time OVER!</span> What do you want to do?
+        </div>
+        <div id="AddPoint">Add Points or Warnings</div>
+        <div id="EndFight">Finish the fight</div>
+    </div>
+    <div class="change_time">
+        <div id="title_change"></div>
+        <ul>
+            <li id="suma_t">+</li>
+            <li id="resta_t">-</li>
+            <li id="suma_t_hide">Hide</li>
+        </ul>
+    </div>
+    <div class="resultado_winner" id="w_l_p"></div>
+    <div class="resultado_winner" id="w_r_p"></div>
+    <div class="row text-center" id="scoreboard">
+        <div class="row" style="color:white;font-size:2vw;background-color:black;">
+            <div class="col-12 text-center" style="color:white;font-size:2vw;background-color:black;">
+                <input type="text" style="border:none;font-size: medium;background-color: black;color:white;width:70%;"
+                    placeholder="Write Your Division Here" />
+            </div>
+            <div class="col-6" id="name1" style="font-size:2vw;background-color:black;margin-bottom: 2%;">
+                <label style="color:blue; font-size: larger; font-weight: bold;margin-left:2%;">Ao</label>
+                <input type="text" style="border:none;font-size: medium;background-color: black;color:white;width:80%;"
+                    placeholder="Write Ao Name Here" />
+            </div>
+
+            <div class="col-6" id="name2" style="font-size:2vw;background-color:black;margin-bottom: 2%;">
+                <label style="color:red; font-size: larger; font-weight: bold;margin-left:2%;">Aka</label> <input
+                    type="text" style="border:none;font-size: medium;background-color: black;color:white;width:80%;"
+                    placeholder="Write Aka Name Here" />
+            </div>
+
+            <div class='btn btn-lg btn-light btn-block' id="close"
+                style='font-size:1.2vw;padding:1vw;position:absolute;right: 150px;top:0;border-radius:50%;color:white;font-weight: bold;width: 80px!important;background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,0,0,1) 48%, rgba(0,0,0,1) 100%);'>
+                Close</div>
+
+                <input type="text"  onkeypress='validate(event)' value="00"
+                style='position:absolute;right: 60px;top:0; width: 6%; min-height: 100px;color:white;border:none;font-size:-webkit-xxx-large;background-color: black;color:white;'/>
+            <div class="container-fluid">
+                <div class="row" id="matchSide" data-toggle=true data-side="sideA">
+
+                    <div class="col-6" id="side1" style="background-color:blue;padding-bottom: 10%;" id="left">
+                        <div class='row'>
+                            <div class="col-sm-12 col-md-12 col-lg-12 text-center"
+                                style="font-size:15vw;color:white;line-height: 80%;">
+                                <span class="points_l" id="points_left">0</span>
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-12">
+                                <div class='row' style="font-size:1.4vw;color:white;margin-top:0.8vw;margin-left: 3%;">
+                                    <div class="col-1 col-sm-1 col-sm-1 col-md-1 col-lg-1 category_l categories"
+                                        id="c_one" style='font-size:1.8vw;padding:0vw'>C1</div>
+                                    <div class="col-2  col-sm-2 col-sm-2 col-md-2 col-lg-2" style='padding:0vw'>
+                                        <span class="c_p_l" id="w_one_left">W</span>
+                                    </div>
+                                    <div class="col-2 col-sm-2 col-sm-2 col-md-2 col-lg-2">
+                                        <span class="c_p_l" id="k_one_left">K</span>
+                                    </div>
+                                    <div class="col-2 col-sm-2 col-sm-2 col-md-2 col-lg-2">
+                                        <span class="c_p_l" id="hc_one_left">HC</span>
+                                    </div>
+                                    <div class="col-2 col-sm-2 col-sm-2 col-md-2 col-lg-2">
+                                        <span class="c_p_l" id="h_one_left">H</span>
+                                    </div>
+                                </div>
+
+                                <div class='row' style="font-size:1.4vw;color:white;margin-top:0.8vw;margin-left: 3%;">
+                                    <div class="col-sm-1 col-md-1 col-lg-1 category_l categories" id="c_two"
+                                        style='font-size:1.8vw;padding:0vw'>C2</div>
+                                    <div class="col-sm-2 col-md-2 col-lg-2" style='padding:0vw'>
+                                        <span class="c_p_l" id="w_two_left">W</span>
+                                    </div>
+                                    <div class="col-sm-2 col-md-2 col-lg-2"><span class="c_p_l" id="k_two_left">K</span>
+                                    </div>
+                                    <div class="col-sm-2 col-md-2 col-lg-2"><span class="c_p_l"
+                                            id="hc_two_left">HC</span></div>
+                                    <div class="col-sm-2 col-md-2 col-lg-2"><span class="c_p_l" id="h_two_left">H</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="row" style="margin-left: 3%;">
+
+                                <div class="col-sm-3 col-md-3 col-lg-3">
+
+                                    <div class="row cursor-point" style="padding:0.6vw;">
+                                        <span class="hide_layer"
+                                            style="border: 2px solid white;padding:0.4vw;border-radius:1vw"
+                                            id="ippon_left">IPPON</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 col-md-3 col-lg-3">
+
+                                    <div class="row cursor-point" style="padding:0.6vw;">
+                                        <span class="hide_layer"
+                                            style="border:2px solid white;padding:0.4vw;border-radius:1vw"
+                                            id="waza_ari_left">WAZA-ARI</span>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-sm-3 col-md-3 col-lg-3">
+                                    <div class="row cursor-point" style='padding:0.6vw;'>
+                                        <span class="hide_layer"
+                                            style="border:2px solid white;padding:0.4vw;border-radius:1vw;"
+                                            id="yuko_left">YUKO</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6" id="side2" style="background-color:red;" id="right">
+                        <div class='row'>
+
+                            <div class="col-sm-12 col-md-12 col-lg-12 text-left"
+                                style="font-size:15vw;color:white;line-height: 80%;">
+                                <span class="points_r" id="points_right">0</span>
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-12">
+                                <div class='row'
+                                    style="font-size:1.4vw;color:white; margin-top:0.8vw; margin-left: 1%;">
+                                    <div class="col-sm-1 col-md-1 col-lg-1 category_r categories" id="c_one"
+                                        style='font-size:1.8vw;padding:0px'>C1
+                                    </div>
+                                    <div class="col-sm-2 col-md-2 col-lg-2" style='padding:0px'>
+                                        <span class="c_p_r" id="w_one_right">W</span>
+                                    </div>
+                                    <div class="col-sm-2 col-md-2 col-lg-2">
+                                        <span class="c_p_r" id="k_one_right">K</span>
+                                    </div>
+                                    <div class="col-sm-2 col-md-2 col-lg-2">
+                                        <span class="c_p_r" id="hc_one_right">HC</span>
+                                    </div>
+                                    <div class="col-sm-2 col-md-2 col-lg-2">
+                                        <span class="c_p_r" id="h_one_right">H</span>
+                                    </div>
+                                </div>
+                                <div class='row' style="font-size:1.4vw; color:white;margin-top:0.8vw;margin-left: 1%;">
+                                    <div class="col-sm-1 col-md-1 col-lg-1 category_r categories" id="c_two"
+                                        style='font-size:1.8vw;padding:0px'>C2
+                                    </div>
+                                    <div class="col-sm-2 col-md-2 col-lg-2" style='padding:0px'>
+                                        <span class="c_p_r" id="w_two_right">W</span>
+                                    </div>
+                                    <div class="col-sm-2 col-md-2 col-lg-2"><span class="c_p_r"
+                                            id="k_two_right">K</span></div>
+                                    <div class="col-sm-2 col-md-2 col-lg-2"><span class="c_p_r"
+                                            id="hc_two_right">HC</span>
+                                    </div>
+                                    <div class="col-sm-2 col-md-2 col-lg-2"><span class="c_p_r"
+                                            id="h_two_right">H</span></div>
+                                </div>
+
+                                <div class="row" style="margin-left:1%;">
+
+                                    <div class="col-sm-3 col-md-3 col-lg-3">
+
+                                        <div class="row cursor-point" style="padding:0.6vw;">
+                                            <span class="hide_layer"
+                                                style="border: 2px solid white;padding:0.4vw;border-radius:1vw;"
+                                                id="ippon_right">IPPON</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 col-md-3 col-lg-3">
+
+                                        <div class="row cursor-point" style="padding:0.6vw;">
+                                            <span class="hide_layer"
+                                                style="border:2px solid white;padding:0.4vw;;border-radius:1vw;"
+                                                id="waza_ari_right">WAZA-ARI</span>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-sm-3 col-md-3 col-lg-3">
+                                        <div class="row cursor-point" style='padding:0.6vw;'>
+                                            <span class="hide_layer"
+                                                style="border:2px solid white;padding:0.4vw;;border-radius:1vw;"
+                                                id="yuko_right">YUKO</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="position-absolute start-50 translate-middle"
+                    style="top:200px;background-color:black;min-width: 300px;min-height:120px;border:0.2vw solid white;opacity: 70%;font-family: 'digitalFont', sans-serif;">
+                    <div class="container" style="margin-top: 5%;">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-6 col-lg-6 text-center"
+                                style="font-size:8vw; color:white;text-align:right; background-color:black;padding:0px;  color:white;line-height:90%;">
+                                <span class="time_m" id="minutos">0 :</span>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-6 text-center" style=" font-size:8vw;color:white;background-color:black;padding:0px;
+            line-height: 90%;">
+                                <span class="time_s" id="segundos">00</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <span class="time_c" id="centesimas" style="margin-left: 40%;">00</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="position-absolute start-50 translate-middle"
+                    style="top:36vw;">
+                    <div class="d-flex justify-content-center" style='color:white;'>
+                        <div class='btn btn-primary btn-block hide_layer' id="t1"
+                            style='font-size:1vw;margin:2px;border:0.2vw solid white;'>30</span></div>
+                        <div class='btn btn-primary btn-block hide_layer ' id="t2"
+                            style='font-size:1vw;margin:2px;border:0.2vw solid white;'>60</span></div>
+                        <div class='btn btn-primary btn-block hide_layer' id="t3"
+                            style='font-size:1vw;margin:2px;border:0.2vw solid white;'>90</span></div>
+
+                        <div class='btn btn-primary btn-block hide_layer' id="t4"
+                            style='font-size:1vw;margin:2px;border:0.2vw solid white;'>120</span></div>
+
+                        <div class='btn btn-primary btn-block hide_layer' id="t5"
+                            style='font-size:1vw;margin:2px;border:0.2vw solid white;'>150</span></div>
+
+                        <div class='btn btn-primary btn-block hide_layer' id="t6"
+                            style='font-size:1vw;margin:2px;border:0.2vw solid white;'>180</span></div>
+                        <!--
+
+                                <div class='btn btn-primary btn-block hide_layer' id="t1" style='font-size:1vw;margin:2px;border:0.2vw solid white;'>90</span></div>
+                                <div class='btn btn-primary btn-block hide_layer ' id="t2" style='font-size:1vw;margin:2px;border:0.2vw solid white;'>2</span></div>
+                                <div class='btn btn-primary btn-block hide_layer' id="t3" style='font-size:1vw;margin:2px;border:0.2vw solid white;'>3</span></div>
+
+                                <div class='btn btn-primary btn-block hide_layer' id="t4" style='font-size:1vw;margin:2px;border:0.2vw solid white;'>3</span></div>
+
+                                <div class='btn btn-primary btn-block hide_layer' id="t5" style='font-size:1vw;margin:2px;border:0.2vw solid white;'>3</span></div>
+
+                                <div class='btn btn-primary btn-block hide_layer' id="t6" style='font-size:1vw;margin:2px;border:0.2vw solid white;'>3</span></div>
+                                -->
+                    </div>
+                </div>
+
+                <div class="fixed-bottom d-flex justify-content-center bottom-buttons">
+                    <!--<div class='btn btn-light hide_layer'
+                            style='font-size:2vw;width: 130px!important;background-color:#8c91a7; color:white;border-radius:5%; margin-left: 90%;'
+                            id="shikkaku_left2">
+                            Shikakku
+                        </div>-->
+
+                    <div class='row'>
+                        <div class='hide_layer btn btn-lg btn-light btn-block' id="switchSide"
+                            style='font-size:1.2vw;padding:1vw; color:white;font-weight: bold;width: 130px!important;position: fixed;left:50;    background: linear-gradient(90deg, blue 50%, red 50%);                                '>
+                            &#8644;</div>
+                    </div>
+                    <div class='btn btn-light hide_layer' id="shikkaku_left"
+                        style='font-size:2vw;width: 130px!important;background-color:#8c91a7; color:white;border-radius:5%;margin-right:3%;'>
+                        Shikakku</div>
+                    <div class='btn btn-light hide_layer'
+                        style='font-size:2vw;width: 130px!important;background-color:#8c91a7; color:white;border-radius:5%;margin-right:3%;'
+                        id="kikken_left">Kiken
+                    </div>
+
+                    <div class='btn btn-success btn-block' id="hajime" style='font-size:2vw;width: 130px!important;'>
+                        Hajime</div>
+
+                    <div class='btn btn-light hide_layer' id="shikkaku_right"
+                        style='font-size:2vw;width: 130px!important;background-color:#8c91a7; color:white;border-radius:5%;margin-left:3%;'>
+                        Shikakku</div>
+                    <div class='btn btn-light hide_layer' id="kikken_right"
+                        style='font-size:2vw;width: 130px!important;background-color:#8c91a7; color:white;border-radius:5%;margin-left:3%;'>
+                        Kiken</div>
+
+                    <div class='row'>
+                        <div class='btn btn-lg btn-light btn-block' id="reset"
+                            style='font-size:1.2vw;padding:1vw; color:white;font-weight: bold;width: 130px!important;position: fixed;right:30;background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,0,0,1) 48%, rgba(0,0,0,1) 100%);'>
+                            Reset</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

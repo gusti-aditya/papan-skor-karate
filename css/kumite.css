@@ -1,0 +1,158 @@
+@font-face {
+	font-family: digitalFont;
+	src: url(font/lcd-bold.ttf);
+  }
+  
+.color-name-left,#name_athlete_left,#name_athlete_right,
+.color-name-right{ cursor:pointer;}
+.color-name-left,.color-name-right{cursor:pointer;}
+.time_m,.time_s,.time_c{cursor:pointer;}
+.time_s{float:left;margin:0vw 5vw 0vw ovw;padding:0px;}
+.time_c{float:left;font-size:2vw;padding:0px;margin-top:8vw;line-height:50%;}
+#give_points_left{clear:both;float:left;margin:40px auto 5px 120px; width:90%;}
+#give_points_right{clear:both;float:left;margin:40px auto 5px 60px; width:85%;}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #FFFFFF;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #FFFFFF;
+}
+
+.btn-bottom{
+	font-size:2vw;width: 130px!important;background-color:transparent; color:white;
+}
+
+#ten_seconds{background-color:black;color:white;position: absolute; left:30%; top:20%;
+border-radius:15px; padding:5px;width:640px;height:300px;overflow:hidden}
+.timer { border:0; font-size:15vw; height:1em; width:3em; text-align:center;}
+.timer_milisec {border:0; font-size:1vw;height:1em;width:3em;text-align:center;}
+.cross { color: white; background: rgb(10,10,10); width:1em; height:1.3em; font-size:4em;font-weight:bold;}
+/*#table_stopwatch td { text-align:center;}*/
+	.ippon_l,.waza_ari_l,.yuko_l,.ippon_r,.waza_ari_r,.yuko_r,#ten_second_show,.points_l,.points_r{cursor:pointer}
+	#ten_second_show{position: absolute;left: 48%;top:20%;border:1px solid white; border-radius:50px; font-size:1vw; color:white;padding:5px;width:50px;margin:5px; background-color:black}
+	#ten_second_show:hover{background-color:red}
+	
+#change_score_left{float:left;margin:5px auto 40px 100px; }
+#change_score_left li{ display:inline; list-style:none; margin:5px 15px 5px 15px; cursor:pointer;padding: 0px 5px 0px 5px}
+#change_score_right{float:right;margin:5px 100px 40px auto; }
+#change_score_right li{ display:inline; list-style:none; margin:1% 2% 0px 12%; cursor:pointer;padding: 0px 5px 0px 5px}	
+/*results*/
+	.resultado_winner{ position:absolute; width:24vw; height:16vw;border:0.6vw solid #CCCC00;border-radius:1vw;line-height:80%;font-size:18vw;padding:0vw;top:2vw;color:#CCCC00;}
+	#w_r_p{top:95px;left:780;}
+	#w_l_p{top:95px;left:100;}
+/*finish winner_looser*/
+					
+#t1,#t2,#t3,#t4,#hajime,.cursor-point,.color-name-left,.color-name-right{cursor:pointer;}
+#t1:hover,#t2:hover,#t3:hover,#t4:hover{ background:#051765;}
+.c_s_l,.c_s_r{ visibility:hidden; float:left; margin:8% 12% 0% 8%;cursor:pointer}
+
+.c_p_l,.c_p_r{font-size:2.0vw;border:0.2vw solid white;}
+#kikken_left,#kikken_right,#shikkaku_left,#shikkaku_right{cursor:pointer;background-color:#8c91a7;}
+#hajime{cursor:pointer;}
+#reset,#resetK{background-color:#930d0b;cursor:pointer}
+#resetK{margin:60px 40px 5px auto;}
+.audiowarning{visibility:hidden;}
+
+.categories{border:0.2vw solid white;border-radius: 10%;height:50px;}
+
+  span.c_p_r, span.c_p_l{
+	background:#8c91a7;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	color: #fff;
+	display: inline-block;
+	font-weight: bold;
+	line-height: 1.6em;
+	margin-right: 15px;
+	text-align: center;
+	width: 1.6em; 
+	height:50px;
+	width: 50px;
+  }
+  
+  .bottom-buttons{
+	background-color: black; opacity:60%;
+  }
+
+  .bottom-buttons:hover{	
+	background-color: black; opacity:1;
+  }
+  
+
+#han-tei{position: absolute;top:3vw;left:20vw;width:60vw;height:40vw;border:0.2vw solid white;border-radius:0.8vw;	background-image:url('../images/Back-Schedule.jpg');color:white;background-repeat:no-repeat;background-position:center;	overflow:hidden;background-color:black}
+
+#han-tei_title{font-size:1.4vw;margin:0.4vw; padding:0.2vw; border:0.2vw solid white; 
+	width:18vw; margin-left:20vw; border-radius:0.4vw;text-align:center}
+
+#han-tei_title:hover{ background-color:#999900; cursor:pointer}
+
+#central_hantei{width:55vw; height:32vw;border:1px solid white;
+border-radius:0.6vw;padding:0.2vw;margin:1vw auto 5vw auto;text-align:center;font-size:1vw}
+
+#central_ring{ float:left;margin:2vw auto 0.6vw auto; width:45vw; height:26vw; border:0.2vw solid white;}
+	
+	#left_ring{ float:left;width:22vw; border-right:0.1vw solid white;height:26vw;background:#4a4bf3;margin:0vw;}
+	#right_ring{ float:left;width:22vw; height:26vw;background:#f44c4b;margin:0vw;}
+		#title_left,#title_right{border:0.1vw solid white; border-radius:1vw; width:5vw; padding:0.2vw; margin:1vw auto 0.4vw 8vw;}
+	
+	.cuadrado_tres,.cuadrado_cinco,#c_l_b,#c_r_b{margin:1vw 1vw 1vw 1vw; border:0.1vw solid white; border-radius:0.6vw; padding:0.2vw width:25vw; height:6vw}
+		
+		#bl31,#bl32,#bl33,#br31,#br32,#br33{ float:left; width:2vw; height:2vw; 
+		margin:0.4vw 1vw 0.4vw 2vw;background-image:url('../images/fw.png'); background-repeat:no-repeat; cursor:pointer;font-size:2.4vw}
+		
+		#c_l_b,#c_r_b{ font-size:2vw; height:5vw; padding:1vw; cursor:pointer}
+		
+		#b3J1{clear:both;}
+		#b3J1,#b3J2,#b3J3{  float:left; padding:0.4vw; margin:0.4vw 1vw 0.4vw 2vw}
+		
+	#bl51,#bl52,#bl53,#bl54,#bl55,#br51,#br52,#br53,#br54,#br55{ float:left; width:2vw; height:2vw; margin:0.4vw 0.8vw 0.4vw 0.8vw;font-size:2.4vw; background-image:url('../images/fw.png'); background-repeat:no-repeat;cursor:pointer;}
+	
+	#b5J1{clear:both;}
+	
+	#b5J1,#b5J2,#b5J3,#b5J4,#b5J5{  float:left; padding:0.4vw; margin:0.4vw 0.8vw 0.4vw 0.8vw;}
+		
+		#JLU{ float:left;margin:0.2vw 0.2vw auto 2vw; width:2vw; border:0.1vw solid white;font-size:1vw}
+		#JRU{ float:left;margin:0.2vw; width:2vw; border:0.1vw solid white;}
+		#JLD{ clear:both; float:left;margin:0.2vw 0.2vw auto 2vw; width:2vw; border:0.1vw solid white;}
+		#JC{ float:left;margin:0.2vw auto 0.4vw 22vw; width:2vw; border:0.1vw solid white;}
+		#JRD{float:left;margin:0.2vw 0.4vw auto 22vw; width:2vw; border:0.1vw solid white;}
+
+#left-winner_buttom,#right-winner_buttom,#center-winner_buttom{border:1px solid white;border-radius:10px;padding:8px 30px 8px 30px;cursor:pointer}
+#left-winner_buttom{float:left;margin:5% auto 5% 10%}
+#left-winner_buttom:hover,#right-winner_buttom:hover{background-color:#808000;margin-top:5.2%;}
+#right-winner_buttom{float:right;margin:5% 10% 5% auto;}
+.change_time{ color:#FFFFFF;position:absolute;padding:2vw; margin:3vw auto 0% 40vw;font-size:1.2vw; background-color:#CC9900; border-radius:10px; overflow:hidden;border:2px solid white;}
+#title_change{margin:0px auto 2vw auto; color:white;border:1px solid white;
+border-radius:1vw; padding:1vw; background-color:#009933}
+.change_time li{ display:inline; list-style: none; padding:1vw 2vw 1vw 2vw; margin:1vw;color:black; border:1px solid white;border-radius:1vw; background-color:#CCCC33;cursor:pointer }
+.change_time li:hover{ background-color:#FF6600;}
+/*#advertisement{position:absolute;background-color:#990000;margin:50% auto 0px 0px; width:98%; 
+padding:5px;border:1px solid white; height:77px; background-image:url(/images/advertisement.jpg); background-repeat:no-repeat}*/
+
+#AddNames{ position:absolute; top:18%; left:42%; width:200px; padding:20px;border:1px solid white; border-radius:5px; background-color:#CC9900;}
+.CName{ margin:10px; padding:5px;border:1px solid white;border-radius:5px;}
+#btnUpdateNames{ margin:10px;padding:5px; border;1px solid white; background-color:#009900; border-radius:5px}
+#btnUpdateNames:hover{ background-color:#66CC66;cursor:pointer}
+#update_values{position:absolute;float:right; margin-top:10%;margin-left:30%;margin-right:400px;border:1px solid #CCCCCC; padding:20px; border-radius:5px;background-color:#00FF7F; color:black;font-weight:bold;font-size:2em }
+#update_values:hover{ background-color:#009900;color:white; cursor:pointer;color:white;}
+/* for the blinking#ff0000*/
+.white_class{background-color:#FFF !important;}
+#ganar{position:absolute;left:40vw;top:10vw;border:1px solid black; padding:1vw; background-color:#FF8C00;border-radius:1vw;color:white;font-size:1.2vw}
+#Yes,#No,#SelHan,#EndFight,#AddPoint{float:left; margin:1vw 5vw 1vw 5vw;border:1px solid white; padding:10px 30px 10px 30px; border-radius:5px;cursor:pointer}
+#Yes:hover,#No:hover{background:yellow;color:black}
+
+#ask_final{position:absolute;left:30vw; top:5vw;padding:0.8vw; background-color:#CC9900;border-radius:1vw;font-size:1.2vw;color:white;}
+
+#circle_senshu{position: absolute; left:60vw;top:3vw;font-size:4vw; color:white;cursor:pointer;
+/*height:340px;width:28%;border-radius: 200px;border:6px solid #14ee19;*/ }
+#update_values,#circle_senshu,#ask_final,#ganar,#w_r_p,#w_l_p,#han-tei,
+.change_time{z-index:300;}
+.responsive {
+  width: 80%;
+  height: auto;
+}
