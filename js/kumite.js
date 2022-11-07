@@ -58,14 +58,14 @@ function dar_puntos(t_p) {
 			point_left = point_left + 3; valor_ipponl++;
 			diferencia = point_left - point_right; if (diferencia < 0) { diferencia = diferencia * -1; }
 			if (boy) {
-				if (point_left > 7) {
+				if (point_left > 8) {
 					confirmar = confirm("There is a winner, are you sure?");
 					if (confirmar) { running = 0; check_winner(); }//play_single_sound(); }
 					else { point_left = point_left - 3; valor_ipponl--; diferencia = 0; }
 				}
 			}
 			else {
-				if (diferencia > 7) {
+				if (diferencia > 8) {
 					confirmar = confirm("There is a winner, are you sure?");
 					if (confirmar) { running = 0; check_winner(); }//play_single_sound(); }
 					else { point_left = point_left - 3; valor_ipponl--; diferencia = 0; }
@@ -77,14 +77,14 @@ function dar_puntos(t_p) {
 			point_right = point_right + 3; valor_ipponr++; diferencia = point_left - point_right;
 			if (diferencia < 0) { diferencia = diferencia * -1; }
 			if (boy) {
-				if (point_right > 7) {
+				if (point_right > 8) {
 					confirmar = confirm("There is a winner, are you sure?");
 					if (confirmar) { running = 0; check_winner();}// play_single_sound(); }
 					else { point_right = point_right - 3; valor_ipponr--; diferencia = 0; }
 				}
 			}
 			else {
-				if (diferencia > 7) {
+				if (diferencia > 8) {
 					confirmar = confirm("There is a winner, are you sure?");
 					if (confirmar) { running = 0; check_winner(); }//play_single_sound(); }
 					else { point_right = point_right - 3; valor_ipponr--; diferencia = 0; }
@@ -97,14 +97,14 @@ function dar_puntos(t_p) {
 			diferencia = point_left - point_right; if (diferencia < 0) { diferencia = diferencia * -1; }
 
 			if (boy) {
-				if (point_left > 7) {
+				if (point_left > 8) {
 					confirmar = confirm("There is a winner, are you sure?");
 					if (confirmar) { running = 0; check_winner();}// play_single_sound(); }
 					else { point_left = point_left - 2; valor_wazal--; diferencia = 0; }
 				}
 			}
 			else {
-				if (diferencia > 7) {
+				if (diferencia > 8) {
 					confirmar = confirm("There is a winner, are you sure?");
 					if (confirmar) { running = 0; check_winner();}// play_single_sound(); }
 					else { point_left = point_left - 2; valor_wazal--; diferencia = 0; }
@@ -117,14 +117,14 @@ function dar_puntos(t_p) {
 			diferencia = point_left - point_right; if (diferencia < 0) { diferencia = diferencia * -1; }
 
 			if (boy) {
-				if (point_right > 7) {
+				if (point_right > 8) {
 					confirmar = confirm("There is a winner, are you sure?");
 					if (confirmar) { running = 0; check_winner(); }//play_single_sound(); }
 					else { point_right = point_right - 2; valor_wazar--; diferencia = 0; }
 				}
 			}
 			else {
-				if (diferencia > 7) {
+				if (diferencia > 8) {
 					confirmar = confirm("There is a winner, are you sure?");
 					if (confirmar) { running = 0; check_winner();}// play_single_sound(); }
 					else { point_right = point_right - 2; valor_wazar--; diferencia = 0; }
@@ -524,14 +524,14 @@ $(document).ready(function () {
 			point_left++; valor_yukol++;
 			diferencia = point_left - point_right; if (diferencia < 0) { diferencia = diferencia * -1; }
 			if (boy) {
-				if (point_left > 7) {
+				if (point_left > 8) {
 					confirmar = confirm("The last point create a winner, are you sure of this?");
 					if (confirmar) { running = 0; check_winner(); }
 					else { point_left--; valor_yukol--; diferencia = 0; }
 				}
 			}
 			else {
-				if (diferencia > 7) {
+				if (diferencia > 8) {
 					confirmar = confirm("There is a winner, are you sure?");
 					if (confirmar) { running = 0; check_winner(); }
 					else { point_left--; valor_yukol--; diferencia = 0; }
@@ -546,7 +546,7 @@ $(document).ready(function () {
 			if (point_left > 0) { point_left--; }
 			diferencia = point_left - point_right; if (diferencia < 0) { diferencia = diferencia * -1; }
 
-			if (diferencia > 7) { running = 0; check_winner(); }
+			if (diferencia > 8) { running = 0; check_winner(); }
 
 			$('#points_left').text(point_left);
 		}
@@ -560,14 +560,14 @@ $(document).ready(function () {
 			point_right++; valor_yukor++;
 			diferencia = point_left - point_right; if (diferencia < 0) { diferencia = diferencia * -1; }
 			if (boy) {
-				if (point_right > 7) {
+				if (point_right > 8) {
 					confirmar = confirm("There is a winner, are you sure?");
 					if (confirmar) { running = 0; check_winner(); }
 					else { point_right--; valor_yukor--; diferencia = 0; }
 				}
 			}
 			else {
-				if (diferencia > 7) {
+				if (diferencia > 8) {
 					confirmar = confirm("There is a winner, are you sure?");
 					if (confirmar) { running = 0; check_winner(); }
 					else { point_right--; valor_yukor--; diferencia = 0; }
@@ -580,9 +580,9 @@ $(document).ready(function () {
 		if (pausing) {
 			point_right++;
 			diferencia = point_left - point_right; if (diferencia < 0) { diferencia = diferencia * -1; }
-			if (diferencia > 7) { check_winner(); }
+			if (diferencia > 8) { check_winner(); }
 
-			if (boy) { if (point_right > 7) { right_winner(); } }
+			if (boy) { if (point_right > 8) { right_winner(); } }
 			$('#points_right').text(point_right);
 
 		}
@@ -948,13 +948,13 @@ $(document).ready(function () {
 
 		if (puntos_izquierda) {
 			point_left++; diferencia = point_left - point_right; if (diferencia < 0) { diferencia = diferencia * -1; }
-			if (diferencia > 7) {
+			if (diferencia > 8) {
 				s = confirm('This side will win. Are you sure?');
 				if (s) { running = 0; check_winner(); }
 				else { point_left--; }
 			}
 			if (boy) {
-				if (point_left > 7) {
+				if (point_left > 8) {
 					s = confirm("This side will win. Are you sure?");
 					if (s) { ; $('#points_left').text(point_left); running = 0; left_winner(); }
 					else { point_left--; }
@@ -966,13 +966,13 @@ $(document).ready(function () {
 		if (puntos_derecha) {
 			point_right++;
 			diferencia = point_left - point_right; if (diferencia < 0) { diferencia = diferencia * -1; }
-			if (diferencia > 7) {
+			if (diferencia > 8) {
 				s = confirm('This side will win. Are you sure?');
 				if (s) { running = 0; check_winner(); }
 				else { point_right--; }
 			}
 			if (boy) {
-				if (point_right > 7) {
+				if (point_right > 8) {
 					s = confirm("This side will win. Are you sure?");
 					if (s) { ; $('#points_right').text(point_right); running = 0; right_winner(); }
 					else { point_right--; }
